@@ -4,7 +4,6 @@ namespace App\Frontend\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Frontend\Models\Product;
 use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
@@ -14,9 +13,9 @@ class ProductController extends Controller
     public function index()
     {
 
-        $products = new Product;
-        $products = $products->getListofProduct();
-        return view('frontend::products.search', compact('products'));
+        // $products = new Product;
+        // $products = $products->getListofProduct();
+        return view('frontend::products.search');
 
     }
 
@@ -26,10 +25,10 @@ class ProductController extends Controller
     public function show($id)
     {
 
-        $products = new Product;
-        $product = $products->getDetailofProduct($id);
+        // $products = new Product;
+        // $product = $products->getDetailofProduct($id);
 
-        return view('frontend::products.show', compact('product'));
+        return view('frontend::products.show');
 
     }
 

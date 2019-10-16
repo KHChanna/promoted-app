@@ -35,7 +35,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="{{ url('/') }}">GanGos</a>
+        <a href="{{ url('/') }}">PromoApp</a>
     </div>
 
     <!-- /.login-logo -->

@@ -151,7 +151,7 @@
 			});
 		});
 	</script>
-	<a href="{{ route('checkout')}}" class="btn btn-block btn-warning">Checkout</a>
+	<a href="{{ route('checkout')}}" class="btn btn-block btn-info">Checkout</a>
 
 		</aside> <!-- col.// -->
 	</div>

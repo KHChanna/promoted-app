@@ -3,6 +3,7 @@
 @section('content')
 
 <!-- ========================= SECTION MAIN ========================= -->
+<hr>
 <br>
 
 <!-- ========================= SECTION MAIN END// ========================= -->
@@ -38,16 +39,19 @@
 				<div class="input-group">
 					<input class="form-control" placeholder="Search" type="text">
 					<div class="input-group-append">
-						<button class="btn btn-warning" type="button"><i class="fa fa-search"></i></button>
+						<button class="btn btn-info" type="button"><i class="fa fa-search"></i></button>
 					</div>
 				</div>
 				</form>
 
 				<ul class="list-unstyled list-lg">
-					<li><a href="#">Beer <span class="float-right badge badge-light round">142</span> </a></li>
-					<li><a href="#">Soft drinks  <span class="float-right badge badge-light round">3</span>  </a></li>
-					<li><a href="#">Drinking water <span class="float-right badge badge-light round">32</span>  </a></li>
-					<li><a href="#">Other <span class="float-right badge badge-light round">12</span>  </a></li>
+					<li><a href="#">Computer <span class="float-right badge badge-light round">142</span> </a></li>
+					<li><a href="#">Fashion  <span class="float-right badge badge-light round">3</span>  </a></li>
+					<li><a href="#">Smart Watch <span class="float-right badge badge-light round">32</span>  </a></li>
+					<li><a href="#">Smart Phone <span class="float-right badge badge-light round">12</span>  </a></li>
+					<li><a href="#">Men <span class="float-right badge badge-light round">12</span>  </a></li>
+					<li><a href="#">Women <span class="float-right badge badge-light round">12</span>  </a></li>
+					<!-- <li><a href="#">Smart Phone <span class="float-right badge badge-light round">12</span>  </a></li> -->
 				</ul>
 			</div> <!-- card-body.// -->
 		</div> <!-- collapse .// -->
@@ -74,7 +78,7 @@
 					<input class="form-control" placeholder="$100" type="number">
 				</div>
 				</div> <!-- form-row.// -->
-				<button class="btn btn-block btn-outline-warning">Apply</button>
+				<button class="btn btn-block btn-outline-info">Apply</button>
 			</div> <!-- card-body.// -->
 		</div> <!-- collapse .// -->
 	</article> <!-- card-group-item.// -->
@@ -135,15 +139,15 @@
 <main class="col-sm-9">
 <div class="row">
 
-
+	{{--}}
 	@foreach($products as $product)
 
 	<div class="col-md-4">
 		<figure class="card card-product">
-			{{--}}
+
 	    <span class="badge-new"> NEW </span>
 	    <span class="badge-offer"><b> -50%</b></span>
-			--}}
+	
 
 			<a href="{{ route('product.show', ['id'=>$product->id]) }}">
 				<div class="img-wrap"> <img src="{{$product->image_name}}"></div>
@@ -169,7 +173,7 @@
 	</div> <!-- col // -->
 
 	@endforeach
-
+	--}}
 
 
 {{--}}

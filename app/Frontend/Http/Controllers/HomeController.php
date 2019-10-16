@@ -3,11 +3,11 @@
 namespace App\Frontend\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Frontend\Models\Product;
 use GuzzleHttp\Client;
 use App\Frontend\Models\Banner;
-use App\Frontend\Models\Category;
+use App\Frontend\Models\Categories;
 use App\Frontend\Models\ShoppingCart;
+use App\Frontend\Models\Advertise;
 use Illuminate\Support\Facades\Auth;
 use Cart;
 
@@ -34,42 +34,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $product = new Product;
-        $category = new Category;
-        // $banner = new Banner;
-
-        $data = [
-            'random_products' => $product->getListofProduct(),
-            'promoted_products' => $product->getPromotedProducts(),
-            'new_products' => $product->getNewofProduct(),
-            'categories' => $category->getListofCategory(),
-            // 'banners' => $banner->getActiveBannerList()
-        ];
-        if(Auth::user()){
-            $userId = auth()->user()->id; // or any string represents user identifier
-            $contents = ShoppingCart::where('identifier', $userId)->first();
-            if($contents != null){
-                // return $content;
-                $cartItems = unserialize($contents->content);
-                $items = Cart::session($userId)->getContent();
-                if(!count($items) > 0){
-                    foreach ($cartItems as $item){
-                        Cart::session($userId)->add([
-                            'id' => $item->id,
-                            'name' => $item->name,
-                            'price' => $item->price,
-                            'quantity' => $item->quantity,
-                            'attributes' => [
-                                'image' => $item->attributes->image
-                            ]
-                        ]);
-                    }
-                }
-            }
-            
-        }
+       
         // return $product;
-        return view('frontend::home')->with(['data' => $data]);
+        return view('frontend::home');
     }
 
     /**

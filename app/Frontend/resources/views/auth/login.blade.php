@@ -11,14 +11,14 @@
 
           <center>
             <a href="{{ url('/')}}">
-              <img class="logo" src="{{ asset('img/gg_logo.png')}}">
+              <img class="logo" src="{{ asset('img/_logo.png')}}" style="width:150px; margin-left:-20px;">
             </a>
           </center>
 
           <div class="card">
 
           <article class="card-body">
-          	{{--}}<a href="{{ url('register') }}" class="float-right btn btn-outline-warning">Sign up</a>--}}
+          	{{--}}<a href="{{ url('register') }}" class="float-right btn btn-outline-info">Sign up</a>--}}
           	<h4 class="card-title mt-3 text-center">Login</h4>
             {{--}}
             <p>
@@ -57,7 +57,7 @@
               <div class="row">
                   <div class="col-md-12">
                       <div class="form-group">
-                          <button type="submit" class="btn btn-warning btn-block">{{ __('Login') }}</button>
+                          <button type="submit" class="btn btn-info btn-block">{{ __('Login') }}</button>
                       </div> <!-- form-group// -->
                   </div>
 

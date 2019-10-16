@@ -5,11 +5,12 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="Bootstrap-ecommerce by Vosidiy">
 
-<title>GanGos</title>
+<title>PromoApp</title>
 {{--}}
 <link rel="shortcut icon" type="image/x-icon" href="{{ asset('ui-ecommerce/images/favicon.ico')}}">
 --}}
-
+<!-- font awsome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 <!-- Styles -->
 <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
@@ -38,9 +39,24 @@
 <link href="{{ asset('ui-ecommerce/css/ui.css')}}" rel="stylesheet" type="text/css"/>
 <link href="{{ asset('ui-ecommerce/css/responsive.css')}}" rel="stylesheet" media="only screen and (max-width: 1200px)" />
 
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
-
-
+<style>
+    .btn-rounded {
+        border-radius: 20px;
+        margin:0px 10px;
+    }
+    .head-cat{
+        background-color:#6cb2eb;
+        color: white;
+        padding: 10px;
+        border-radius: 4px;
+    }
+    .h6{
+        font-weight:700px;
+    }
+</style>
 
 <!-- custom javascript -->
 <script src="{{ asset('ui-ecommerce/js/script.js')}}" type="text/javascript"></script>

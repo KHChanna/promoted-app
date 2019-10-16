@@ -7,7 +7,7 @@
 
           <center>
             <a href="{{ url('/')}}">
-              <img class="logo" src="{{ asset('img/gg_logo.png')}}">
+              <img class="logo" src="{{ asset('img/_logo.png')}}" style="width:150px; margin-left:-20px;">
             </a>
             {{--}}
             <h2><a href="{{ url('/')}}">{{ env('APP_NAME')}}</a></h2>
@@ -84,20 +84,6 @@
 
         </div> <!-- form-group// -->
 
-        {{--}}
-        <div class="form-group input-group">
-        	<div class="input-group-prepend">
-    		    <span class="input-group-text"> <i class="fa fa-building"></i> </span>
-    		</div>
-    		<select class="form-control">
-    			<option selected=""> Select job type</option>
-    			<option>Designer</option>
-    			<option>Manager</option>
-    			<option>Accaunting</option>
-    		</select>
-    	</div> <!-- form-group end.// -->
-      --}}
-
 
         <div class="form-group input-group">
         	<div class="input-group-prepend">
@@ -126,7 +112,7 @@
 
 
         <div class="form-group">
-            <button type="submit" class="btn btn-warning btn-block"> Create Account  </button>
+            <button type="submit" class="btn btn-info btn-block"> Create Account  </button>
         </div> <!-- form-group// -->
         <p class="text-center">Have an account? <a href="{{ url('/login')}}">Log In</a> </p>
     </form>

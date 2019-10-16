@@ -37,6 +37,7 @@ Route::post('password/reset', 'Http\Controllers\Auth\ResetPasswordController@res
     });
     */
 
+    // Route::get('/', 'Http\Controllers\AdvertiseController@index')->name('home');
     Route::get('/', 'Http\Controllers\HomeController@index')->name('home');
     Route::get('/home','Http\Controllers\HomeController@Home');
 
@@ -53,8 +54,11 @@ Route::post('password/reset', 'Http\Controllers\Auth\ResetPasswordController@res
     Route::post('/rm-cart/{id}', ['as'=>'rm-cart', 'uses'=>'Http\Controllers\CartController@removeCart']);
     Route::get('/delete-cart', ['as'=>'delete-cart', 'uses'=>'Http\Controllers\CartController@clearCart']);
 
+    Route::get('/add-product', ['as'=>'add-product', 'uses'=>'Http\Controllers\AdvertiseController@index']);
+    Route::post('/addproduct', ['as'=>'addproduct', 'uses'=>'Http\Controllers\AdvertiseController@addProduct']);
 
-
+    //user product
+    Route::get('/myproduct', ['as'=>'myproduct', 'uses'=>'Http\Controllers\AdvertiseController@ShowUserProduct']);
 
     Route::get('/checkout', ['as'=>'checkout', 'uses'=>'Http\Controllers\CheckoutController@index']);
 

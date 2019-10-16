@@ -3,230 +3,222 @@
 @section('content')
 
 <!-- ========================= SECTION MAIN ========================= -->
-<br>
-<section class="section-main bg1 padding-bottom">
-<div class="container">
-<div class="row no-gutters bAdd to cart bAdd to cart-top-0 bg-white">
 
-{{--}}
-
-<aside class="col-lg-5-24">
-<nav>
-	<div class="title-category bg-secondary white d-none d-lg-block" style="margin-top:-53px">
-		<span>Categories</span>
+<div class=".container-fluid">
+	<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+		<img class="d-block w-100" src="img/banners/banner1.jpg" alt="First slide">
+		</div>
+		<div class="carousel-item">
+		<img class="d-block w-100" src="img/banners/banner2.jpg" alt="Second slide">
+		</div>
 	</div>
-	<ul class="menu-category">
-		<li> <a href="#">Beer </a></li>
-		<li> <a href="#">Juice & Juice Drinks </a></li>
-		<li> <a href="#">Energy Drinks </a></li>
-		<li> <a href="#">Sports Drinks  </a></li>
-		<li> <a href="#">Drinking Water  </a></li>
-
-
-		<li> <a href="#">Mobile phones  </a></li>
-		<li class="has-submenu"> <a href="#">More category  <i class="icon-arrow-right pull-right"></i></a>
-			<ul class="submenu">
-				<li> <a href="#">Food &amp Beverage </a></li>
-				<li> <a href="#">Home Equipments </a></li>
-				<li> <a href="#">Machinery Items </a></li>
-				<li> <a href="#">Toys & Hobbies  </a></li>
-				<li> <a href="#">Consumer Electronics  </a></li>
-				<li> <a href="#">Home & Garden  </a></li>
-				<li> <a href="#">Beauty & Personal Care  </a></li>
-			</ul>
-		</li>
-
-
-	</ul>
-</nav>
-</aside> <!-- col.// -->
---}}
-
-<main class="col-lg-24-24">
-<!-- ========= intro aside ========= -->
-<div class="row no-gutters">
-	<div class="col-lg-12 col-md-12">
-<!-- ================= main slide ================= -->
-
-<div class="owl-init slider-main owl-carousel" data-items="1" data-margin="1" data-nav="true" data-dots="false">
-	<div class="item-slide">
-		<img src="img/banners/banner1.jpg">
+	<a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="sr-only">Previous</span>
+	</a>
+	<a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="sr-only">Next</span>
+	</a>
 	</div>
-	<div class="item-slide">
-		<img src="img/banners/banner2.jpg">
-	</div>
-  {{--}}
-	<div class="item-slide">
-		<img src="ui-ecommerce/images/banners/slide3.jpg">
-	</div>
-  --}}
 </div>
-
-<!-- ============== main slidesow .end // ============= -->
-	</div> <!-- col.// -->
-
-  {{--}}
-	<div class="col-lg-3 col-md-4">
-<ul class="list-group list-group-flush">
-    <li class="list-group-item">
-		<h6>Group of items goes here</h6>
-		<a href="#" class="btn btn-warning btn-sm btn-round"> View all </a>
-    </li>
-    <li class="list-group-item">
-		<h6>Group of items goes here</h6>
-		<a href="#" class="btn btn-warning btn-sm btn-round"> View all </a>
-    </li>
-    <li class="list-group-item">
-		<h6>Group of items goes here</h6>
-		<a href="#" class="btn btn-warning btn-sm btn-round"> View all </a>
-    </li>
-  </ul>
-	</div> <!-- col.// -->
-  --}}
-
-
-</div> <!-- row.// -->
-<!-- ======== intro aside ========= .// -->
-</main> <!-- col.// -->
-</div> <!-- row.// -->
-</div> <!-- container .//  -->
-</section>
+<br>
 <!-- ========================= SECTION MAIN END// ========================= -->
 
+<div class="container">
+<!-- search bar -->
+<div class="col-lg-11-24 col-sm-12 order-3 order-lg-2 float-right">
+		<form action="{{ route('search')}}" method="get">
+			<div class="input-group w-100">
+        
+			    <input type="text" id="q" name="q" class="form-control" style="width:40%;" placeholder="Search">
 
-
-
+			    <div class="input-group-append">
+			      <button class="btn btn btn-info" type="submit">
+			        <i class="fa fa-search"></i>
+			      </button>
+			    </div>
+		    </div>
+		</form> <!-- search-wrap .end// -->
+	</div> <!-- col.// -->
+</div>
+</div>
+<br>
 
 <!-- ========================= SECTION ITEMS ========================= -->
 <section class="section-request padding-y-sm">
 <div class="container">
 
+<!-- New Product -->
+<header class="section-heading heading-line1">
+		<h4 class="title-section bg1 text-uppercase head-cat">Category</h4>
+	</header>
+
+	<div class="row-sm d-flex justify-content-center">
+
+		
+			<button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Computer</button>
+			<button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Fashion</button>
+			<button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Smart Watch</button>
+			<button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Smart Phone</button>
+			<button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Men</button>
+			<button type="button" class="btn btn-outline-primary btn-rounded waves-effect">Women</button>
+	
+
+	</div> <!-- row.// -->
+
 	<!-- New Product -->
 	<header class="section-heading heading-line1">
-		<h4 class="title-section bg1 text-uppercase">New Products</h4>
+		<h6 class="title-section bg1 text-uppercase">Top Sale <span style="color:red;">*</span></h6>
 	</header>
 
 	<div class="row-sm">
 
-	@foreach($data['new_products'] as $new_product)
-		<div class="col-md-3">
+		<div class="col-md-2">
 			<figure class="card card-product">
 				{{--}}
 			<span class="badge-new"> NEW </span>
 			<span class="badge-offer"><b> -50%</b></span>
 				--}}
 
-				<a href="{{ route('product.show', ['id'=>$new_product->id]) }}">
+				<a href="#">
 					<div class="img-wrap">
-						<img src="{{$new_product->image_name}}">
+						<img src="">
 					</div>
 				</a>
 				<figcaption class="info-wrap">
-					<h6 class="title "><a href="{{ route('product.show', ['id'=>$new_product->id]) }}">{{ $new_product->name }}</a></h6>
+					<h6 class="title "><a href="#"></a></h6>
 
 					<div class="price-wrap h5">
-					<form method="POST" action="{{ route('add-cart', ['id'=>$new_product->id]) }}">
+					<form method="POST" action="">
 						<input name="_method" type="hidden" value="post">
 						{{ csrf_field() }}
 
-						<button type="submit" class="btn btn-warning btn-sm float-right">Add to cart</button>
+						<button type="submit" class="btn btn btn-info btn-sm float-right">Add to cart</button>
 					</form>
-				<!-- <a href="/add-cart/{{$new_product->id}}" class="btn btn-warning btn-sm float-right"> Add to cart </a> -->
-						<span class="price-new">${{ $new_product->sale_price>0?$new_product->sale_price:$new_product->unit_price }}</span>
-						@if($new_product->sale_price>0)
-							<del class="price-old">{{ $new_product->unit_price }}</del>
-						@endif
+						<span class="price-new">$</span>
+						
 					</div> <!-- price-wrap.// -->
 
 				</figcaption>
 			</figure> <!-- card // -->
 		</div> <!-- col // -->
-	@endforeach
 
 	</div> <!-- row.// -->
 
-
 	<!-- Promoted Product -->
 	<header class="section-heading heading-line1">
-		<h4 class="title-section bg1 text-uppercase">Promoted Product</h4>
+		<h6 class="title-section bg1 text-uppercase">New Products <span style="color:red;">*</span></h6>
 	</header>
 
 	<div class="row-sm">
 
-		@foreach($data['promoted_products'] as $promoted_product)
-			<div class="col-md-3">
+			<div class="col-md-2">
 				<figure class="card card-product">
 					{{--}}
 				<span class="badge-new"> NEW </span>
 				<span class="badge-offer"><b> -50%</b></span>
 					--}}
 
-					<a href="{{ route('product.show', ['id'=>$promoted_product->id]) }}">
+					<a href="">
 						<div class="img-wrap">
-							<img src="{{$promoted_product->image_name}}">
+							<img src="">
 						</div>
 					</a>
 					<figcaption class="info-wrap">
-						<h6 class="title "><a href="{{ route('product.show', ['id'=>$promoted_product->id]) }}">{{ $promoted_product->name }}</a></h6>
+						<h6 class="title "><a href="#"></a></h6>
 
 						<div class="price-wrap h5">
-							<form method="POST" action="{{ route('add-cart', ['id'=>$promoted_product->id]) }}">
+							<form method="POST" action="{{route('addproduct')}}">
 							<input name="_method" type="hidden" value="post">
 							{{ csrf_field() }}
 
-							<button type="submit" class="btn btn-warning btn-sm float-right">Add to cart</button>
+							<button type="submit" class="btn btn btn-info btn-sm float-right">Add to cart</button>
 							</form>
 					<!-- <a href="/cart" class="btn btn-warning btn-sm float-right"> Add to cart </a> -->
-							<span class="price-new">${{ $promoted_product->sale_price>0?$promoted_product->sale_price:$promoted_product->unit_price }}</span>
-							@if($promoted_product->sale_price>0)
-								<del class="price-old">{{ $promoted_product->unit_price }}</del>
-							@endif
+							<span class="price-new">$</span>
+							
 						</div> <!-- price-wrap.// -->
 
 					</figcaption>
 				</figure> <!-- card // -->
 			</div> <!-- col // -->
-		@endforeach
 
 	</div> <!-- row.// -->
 
+	<!-- Discount Product -->
+	<header class="section-heading heading-line1">
+		<h6 class="title-section bg1 text-uppercase">Top Discount <span style="color:red;">*</span></h6>
+	</header>
+
+	<div class="row-sm">
+
+		<div class="col-md-2">
+			<figure class="card card-product">
+				{{--}}
+			<span class="badge-new"> NEW </span>
+			<span class="badge-offer"><b> -50%</b></span>
+				--}}
+
+				<a href="#">
+					<div class="img-wrap">
+						<img src="">
+					</div>
+				</a>
+				<figcaption class="info-wrap">
+					<h6 class="title "><a href="#"></a></h6>
+
+					<div class="price-wrap h5">
+					<form method="POST" action="">
+						<input name="_method" type="hidden" value="post">
+						{{ csrf_field() }}
+
+						<button type="submit" class="btn btn btn-info btn-sm float-right">Add to cart</button>
+					</form>
+						<span class="price-new">$</span>
+						
+					</div> <!-- price-wrap.// -->
+
+				</figcaption>
+			</figure> <!-- card // -->
+		</div> <!-- col // -->
+
+	</div> <!-- row.// -->
 	<!-- Category -->
+	{{--}}
 	<header class="section-heading heading-line1">
 		<h4 class="title-section bg1 text-uppercase">Categories</h4>
 	</header>
 
 	<div class="row-sm">
 
-		@foreach($data['categories'] as $category)
 			<div class="col-md-3">
 				<figure class="card card-product">
-					{{--}}
+					
 				<span class="badge-new"> NEW </span>
 				<span class="badge-offer"><b> -50%</b></span>
-					--}}
+					
 
-					<a href="{{ route('product.show', ['id'=>$category->id]) }}">
+					<a href="#">
 						<div class="img-wrap">
-							<img src="{{$category->image_name}}">
+							<img src="">
 						</div>
 					</a>
 					<figcaption class="info-wrap">
-						<h6 class="title "><a href="{{ route('product.show', ['id'=>$category->id]) }}">{{ $category->default_name }}</a></h6>
+						<h6 class="title "><a href=""></a></h6>
 
 						<div class="price-wrap h5">
-					<!-- <a href="/cart" class="btn btn-warning btn-sm float-right"> Add to cart </a> -->
-							<!-- <span class="price-new">${{ $promoted_product->sale_price>0?$promoted_product->sale_price:$promoted_product->unit_price }}</span>
-							@if($promoted_product->sale_price>0)
-								<del class="price-old">{{ $promoted_product->unit_price }}</del>
-							@endif -->
+					
 						</div> <!-- price-wrap.// -->
 
 					</figcaption>
 				</figure> <!-- card // -->
 			</div> <!-- col // -->
-		@endforeach
 
 	</div> <!-- row.// -->
+	--}}
 </div><!-- container // -->
 </section>
 <!-- ========================= SECTION ITEMS .END// ========================= -->
